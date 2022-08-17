@@ -1,0 +1,32 @@
+# Elastic IP
+resource "aws_eip" "amazon-sub01-eip" {
+  instance = module.amazon-sub01-vm.amazon-vm-instance_id
+  tags = {
+    "Name" = "${var.prefix}-amazon-sub01-eip"
+  }
+}
+
+# Elastic IP
+resource "aws_eip" "ubuntu-sub01-eip" {
+  instance = module.ubuntu-sub01-vm.ubuntu-vm-instance_id
+  tags = {
+    "Name" = "${var.prefix}-ubuntu-sub01-eip"
+  }
+}
+# Elastic IP
+resource "aws_eip" "amazon-sub02-eip" {
+  instance = module.amazon-sub02-vm.amazon-vm-instance_id
+  tags = {
+    "Name" = "${var.prefix}-amazon-sub02-eip"
+  }
+}
+
+
+
+# Elastic IP
+resource "aws_eip" "ubuntu-sub02-eip" {
+  instance = module.ubuntu-sub02-vm.ubuntu-vm-instance_id
+  tags = {
+    "Name" = "${var.prefix}-ubuntu-sub02-eip"
+  }
+}
