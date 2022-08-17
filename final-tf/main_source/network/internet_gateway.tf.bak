@@ -1,9 +1,0 @@
-# Create Internet Gateway
-
-resource "aws_internet_gateway" "igw" {
-  vpc_id = module.vpc-ansible.vpc_id
-
-  tags = {
-    "Name" = "${var.prefix}-${var.ansible_env}-igw"
-  }
-}

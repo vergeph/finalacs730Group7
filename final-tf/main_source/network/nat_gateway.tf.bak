@@ -1,9 +1,0 @@
-# Create NAT gateway
-
-resource "aws_nat_gateway" "nat" {
-  allocation_id = aws_eip.eip_nat.id
-  subnet_id     = module.vpc-nonprod.public_subnet_id[0]
-  tags = {
-    Name = "${var.prefix}-${var.nonprod_env}-nat"
-  }
-}
