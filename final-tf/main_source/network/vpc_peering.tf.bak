@@ -1,0 +1,22 @@
+# Create VPC peering
+
+#resource "aws_vpc_peering_connection" "vpc_peering" {
+#  peer_owner_id = "815162785185"
+#  peer_vpc_id = module.vpc-nonprod.vpc_id
+#  vpc_id = module.vpc-prod.vpc_id
+#  peer_region = "us-east-1"
+
+#  tags = {
+#    Name = "VPC Peering between nonprod and prod"
+#  }
+
+#}
+
+#resource "aws_vpc_peering_connection_accepter" "accepter" {
+#  vpc_peering_connection_id = aws_vpc_peering_connection.vpc_peering.id
+#  auto_accept               = true
+#  tags = {
+#    Name = "Peer accept"
+#  }
+#}
+

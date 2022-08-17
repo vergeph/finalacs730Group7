@@ -1,0 +1,7 @@
+# Associate subnets with the custom route table
+resource "aws_route_table_association" "ansible_public_routes" {
+  count          = length(module.vpc-ansible.public_subnet_id[*])
+  route_table_id = aws_route_table.ansible_public_subnets.id
+  subnet_id      = module.vpc-ansible.public_subnet_id[count.index]
+}
+
