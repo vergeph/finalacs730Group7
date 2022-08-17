@@ -2,7 +2,7 @@
 
 module "vpc-dev" {
 #  source             = "../../../final-project/aws_network/"
- source   = "git@github.com:kyunghoryu/final-project-acs730.git//aws_network"
+ source   = "git@github.com:vergeph/finalacs730Group7.git//aws_network"
   env                = var.dev_env
   vpc_cidr           = var.dev_vpc_cidr
   public_cidr_blocks = var.dev_public_subnet_cidrs
@@ -14,7 +14,7 @@ module "vpc-dev" {
 # Create Staging VPC
 module "vpc-staging" {
 #  source             = "../../../final-project/aws_network/"
- source   = "git@github.com:kyunghoryu/final-project-acs730.git//aws_network"
+ source   = "git@github.com:vergeph/finalacs730Group7.git//aws_network"
   env                = var.staging_env
   vpc_cidr           = var.staging_vpc_cidr
   public_cidr_blocks = var.staging_public_subnet_cidrs
@@ -26,7 +26,7 @@ module "vpc-staging" {
 # Create Prod VPC
 module "vpc-prod" {
 #  source             = "../../../final-project/aws_network/"
- source   = "git@github.com:kyunghoryu/final-project-acs730.git//aws_network"
+ source   = "git@github.com:vergeph/finalacs730Group7.git//aws_network"
   env                = var.prod_env
   vpc_cidr           = var.prod_vpc_cidr
   public_cidr_blocks = var.prod_public_subnet_cidrs
